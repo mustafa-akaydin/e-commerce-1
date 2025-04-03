@@ -158,4 +158,19 @@ document.addEventListener('keydown', function (event) {
   }
 })
 
+// Collection Banner Scroll Efekti
+document.addEventListener('DOMContentLoaded', function () {
+  const collectionContent = document.querySelector('.collection-content')
+  const banner = document.querySelector('.collection-banner')
 
+  window.addEventListener('scroll', function () {
+    const bannerBottom = banner.offsetTop + banner.offsetHeight
+    const scrollPosition = window.scrollY
+
+    if (scrollPosition > bannerBottom / 5) {
+      collectionContent.classList.add('scrolled')
+    } else {
+      collectionContent.classList.remove('scrolled')
+    }
+  })
+})

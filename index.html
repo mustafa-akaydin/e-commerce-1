@@ -49,6 +49,7 @@
           <h3 class="fw-bold">ELEGANCE</h3></a
         >
       </div>
+
       <!-- Ana Menü -->
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -196,11 +197,15 @@
             </div>
 
             <!-- Mevcut Menü Yapısı -->
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div
+              class="collapse navbar-collapse"
+              id="navbarNav"
+              style="margin-right: 160px"
+            >
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item dropdown">
                   <a class="nav-link" href="#" data-category="yeni"
-                    >Yeni Koleksiyon</a
+                    ><h6>Yeni Koleksiyon</h6></a
                   >
                   <div class="mega-menu" id="menu-yeni">
                     <div class="mega-menu-inner">
@@ -291,7 +296,7 @@
                     class="nav-link"
                     href="/product-list.html"
                     data-category="elbise"
-                    >Elbiseler</a
+                    ><h6>Elbiseler</h6></a
                   >
                   <div class="mega-menu" id="menu-elbise">
                     <div class="mega-menu-inner">
@@ -343,7 +348,7 @@
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link" href="#" data-category="aksesuar"
-                    >Aksesuarlar</a
+                    ><h6>Aksesuarlar</h6></a
                   >
                   <div class="mega-menu" id="menu-aksesuar">
                     <div class="mega-menu-inner">
@@ -407,24 +412,22 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container-fluid p-0">
-        <div class="row g-0">
-          <div class="col-md-6">
-            <img
-              src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3"
-              class="img-fluid w-100"
-              alt="Hero Image"
-            />
-          </div>
-          <div
-            class="col-md-6 d-flex align-items-center justify-content-center bg-light"
-          >
-            <div class="text-center p-5">
-              <h2 class="display-4 mb-4">Yeni Koleksiyon</h2>
-              <p class="lead mb-4">Lüks ve zarafetin buluştuğu nokta</p>
-              <a href="#" class="btn btn-outline-dark">Keşfet</a>
+    <!-- Hero Section yerine -->
+    <section class="container">
+      <div class="collection-banner">
+        <img
+          src="/img/slider.avif"
+          alt="The Eyewear Collection"
+          class="collection-image"
+        />
+        <div class="collection-content">
+          <h1 class="collection-title">The Eyewear Collection</h1>
+          <div class="collection-links d-flex">
+            <div>
+              <a href="#" class="collection-link">— Woman —</a>
+            </div>
+            <div>
+              <a href="#" class="collection-link">— Man —</a>
             </div>
           </div>
         </div>
@@ -503,6 +506,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Services Banner -->
     <section class="services-banner py-5">
       <div class="container">
         <div class="row">
@@ -619,11 +624,10 @@
         <!-- Legal & Social Media -->
         <div class="row" style="color: var(--primary)">
           <div class="text-center mt-2">
-            <h5 >Follow us</h5>
+            <h5>Follow us</h5>
             <a href="#"><i class="fab fa-instagram fa-2x mx-2"></i></a>
             <a href="#"><i class="fab fa-facebook fa-2x mx-2"></i></a>
             <a href="#"><i class="fab fa-linkedin fa-2x mx-2"></i></a>
-
           </div>
         </div>
       </div>

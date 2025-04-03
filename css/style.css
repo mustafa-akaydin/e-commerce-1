@@ -7,7 +7,9 @@
   --gray: #666666;
   --border-color: #eeeeee;
   --font-heading: 'Cormorant Garamond', serif;
-  --font-body: 'Mulish', sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 /* Genel Stiller */
@@ -107,7 +109,6 @@ h6,
 /* Ana Menü */
 .nav-link {
   font-size: 0.85rem;
-  text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0.5rem 1.5rem !important;
   color: var(--dark) !important;
@@ -447,6 +448,101 @@ h6,
 
   .nav-icons {
     gap: 0.8rem;
+  }
+}
+
+/* Collection Banner Stilleri */
+.collection-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.collection-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection-content {
+  position: absolute;
+  top: 50%; /* Başlangıçta ortada */
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  color: var(--light);
+  padding: 2rem;
+  transition: all 0.6s ease;
+  z-index: 2;
+}
+
+/* Overlay ekleyelim ki yazılar daha iyi görünsün */
+.collection-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.collection-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--light);
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.collection-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.collection-link {
+  color: var(--light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.collection-link:hover {
+  color: var(--secondary);
+}
+
+/* Scroll efekti için JavaScript ile eklenecek class */
+.collection-content.scrolled {
+  top: auto;
+  bottom: 0;
+  transform: translateY(0);
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.collection-content.scrolled .collection-title,
+.collection-content.scrolled .collection-link {
+  color: var(--dark);
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+  .collection-title {
+    font-size: 2.5rem;
+  }
+  
+  .collection-links {
+    gap: 1rem;
+  }
+  
+  .collection-link {
+    font-size: 1rem;
   }
 }
 
